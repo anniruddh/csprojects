@@ -1,0 +1,90 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: #F6B319;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#header-nav {
+    border-radius: 0px;
+    background-color: #61122F;
+}
+
+.navbar-brand {
+    height: auto;
+}
+
+    .navbar-brand h1 {
+        color: #F6B319;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+.navbar-header button.navbar-toggle {
+    margin-top: 35px;
+    margin-right: 30px;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+    border: 1px #efe1e6 solid;
+}
+
+#nav-list li a {
+    color: #F6B319;
+    font-size: 1.25em;
+}
+
+#nav-list li {
+    border-bottom: 1px solid white;
+}
+
+    #nav-list li:last-child {
+        border: none;
+    }
+
+    #nav-list li:hover {
+        background-color: #efe1e6;
+    }
+
+#main-content {
+    margin: 10px 15px 15px 15px;
+    min-height: 1000px;
+    background-color: #EFE1E6;
+}
+
+h2.text-center {
+    font-weight: bold;
+}
+
+#main-content h3 {
+    color: #557C3E;
+}
+
+/*  Optional (Ungraded) Part   */
+#main2-container section {
+    border: 1px solid #61122F;
+    min-height: 700px;
+    background-color: #EFE1E6;
+    padding: 5px 15px 5px 15px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+    #main2-container section p {
+        margin-bottom: 40px;
+    }
+
+.sub-heading {
+    margin-top: 5px;
+    color: #557C3E;
+}
+
+.to-top {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
