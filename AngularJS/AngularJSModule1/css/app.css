@@ -1,0 +1,36 @@
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.3em;
+    text-align:center;
+}
+
+div {
+    margin: 10px;
+}
+
+span {
+    float:left;
+    margin:5px;
+}
+
+.ipBox {
+    width: 350px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.greenTxt {
+    color: green;
+}
+
+.redTxt {
+    color: red;
+}
+
+.redBorder {
+    border:solid 1px red;
+}
+
+.greenBorder{
+    border:solid 1px green;
+}
