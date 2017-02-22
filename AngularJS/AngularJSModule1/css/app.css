@@ -1,7 +1,7 @@
 html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.3em;
-    text-align:center;
+    /*text-align:center;*/
 }
 
 div {
@@ -9,14 +9,14 @@ div {
 }
 
 span {
-    float:left;
-    margin:5px;
+    /*float: left;*/
+    margin: 5px;
 }
 
 .ipBox {
     width: 350px;
-    margin-top: 25px;
-    margin-bottom: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .greenTxt {
@@ -28,9 +28,9 @@ span {
 }
 
 .redBorder {
-    border:solid 1px red;
+    border: solid 1px red;
 }
 
-.greenBorder{
-    border:solid 1px green;
+.greenBorder {
+    border: solid 1px green;
 }

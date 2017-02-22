@@ -10,7 +10,9 @@
     <div ng-controller="LunchCheckController">
         <div>
             <span>Enter comma ',' seperated list of items. Please note empty items are NOT considered i.e., , , as an item towards the count.</span>
-            <input class="ipBox {{borderColor}}" type="text" ng-model="InputItems" placeholder="List comma seperated dishes you usually have for lunch..."/>
+        </div>
+        <div>
+            <input class="ipBox {{borderColor}}" type="text" ng-model="InputItems" placeholder="List comma seperated dishes you usually have for lunch..." />
         </div>
         <div>
             <button ng-click="checkItems();">CHECK IF TOO MUCH</button>
