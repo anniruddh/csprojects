@@ -13,6 +13,10 @@ li {
         margin-left: 6px;
     }
 
-button > span {
+.red {
+    color: red;
+}
+
+.green {
     color: green;
 }

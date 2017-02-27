@@ -22,6 +22,10 @@
         var Bought = this;
 
         Bought.BoughtList = CheckOffService.getBoughtList();
+
+        Bought.markItemAsReturned = function (index) {
+            CheckOffService.unMoveItem(index);
+        }
     };
 
     function ShoppingListCheckOffService() {
@@ -49,6 +53,13 @@
             if (index != 'undefined') {
                 Service.boughtList.push(Service.buyList[index]);
                 Service.buyList.splice(index, 1);
+            }
+        }
+
+        Service.unMoveItem = function (index) {
+            if (index != 'undefined') {
+                Service.buyList.push(Service.boughtList[index]);
+                Service.boughtList.splice(index, 1);
             }
         }
     };
