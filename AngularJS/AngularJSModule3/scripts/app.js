@@ -14,18 +14,27 @@
 
         narrower.find = function () {
 
+            narrower.found = [];
+
             if (narrower.searchTerm == '') {
                 console.log('Nothing found');
             }
-            else {
-                searcher.getMatchedMenuItems(narrower.searchTerm).
-                then(
-                function success(result) {
-                    narrower.found = result;
-                }
-                );
+
+            searcher.getMatchedMenuItems(narrower.searchTerm).
+            then(
+            function success(result) {
+                narrower.found = result;
             }
+            );
         };
+
+        narrower.remove = function (index) {
+            narrower.found.splice(index, 1);
+        }
+
+        narrower.isListEmpty = function () {
+            return narrower.found.length > 0;
+        }
     }
 
     MenuSearchService.$inject = ['$http'];
@@ -60,14 +69,34 @@
     function FoundItemsDirective() {
         var ddo = {
             //templateUrl: 'search_list.html',
-            template: '       <ol><li ng-repeat="item in narrower.found">{{item.Description}} <button>Dont want this one!</button> </li> </ol>',
+            template: `
+                <div class ="search_item">
+                    <table>
+                        <tr ng-repeat="item in dirCtrl.items">
+                            <td>
+                            {{item.short_name}}
+                            </td>
+                            <td>
+                            {{item.name}}
+                            </td>
+                            <td>
+                            {{item.description}}
+                            </td>
+                            <td>
+                                <button ng-click="dirCtrl.onRemove({index: $index});">Dont want this one!</button>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class ="error" ng-if="dirCtrl.items.length == 0">Nothing found</div>
+                </div>
+                      `,
             scope: {
                 items: '<',
                 onRemove: '&'
             },
             controller: NarrowItDownController,
-            controllerAs: 'found',
-            bindTocontroller: true
+            controllerAs: 'dirCtrl',
+            bindToController: true
         };
 
         return ddo;
