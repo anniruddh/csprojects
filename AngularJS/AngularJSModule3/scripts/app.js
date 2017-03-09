@@ -68,28 +68,28 @@
 
     function FoundItemsDirective() {
         var ddo = {
-            //templateUrl: 'search_list.html',
-            template: `
-                <div class ="search_item">
-                    <table>
-                        <tr ng-repeat="item in dirCtrl.items">
-                            <td>
-                            {{item.short_name}}
-                            </td>
-                            <td>
-                            {{item.name}}
-                            </td>
-                            <td>
-                            {{item.description}}
-                            </td>
-                            <td>
-                                <button ng-click="dirCtrl.onRemove({index: $index});">Dont want this one!</button>
-                            </td>
-                        </tr>
-                    </table>
-                    <div class ="error" ng-if="dirCtrl.items.length == 0">Nothing found</div>
-                </div>
-                      `,
+            templateUrl: 'search_list.html',
+            //template: `
+            //    <div class ="search_item">
+            //        <table>
+            //            <tr ng-repeat="item in dirCtrl.items">
+            //                <td>
+            //                {{item.short_name}}
+            //                </td>
+            //                <td>
+            //                {{item.name}}
+            //                </td>
+            //                <td>
+            //                {{item.description}}
+            //                </td>
+            //                <td>
+            //                    <button ng-click="dirCtrl.onRemove({index: $index});">Dont want this one!</button>
+            //                </td>
+            //            </tr>
+            //        </table>
+            //        <div class ="error" ng-if="dirCtrl.items.length == 0">Nothing found</div>
+            //    </div>
+            //          `,
             scope: {
                 items: '<',
                 onRemove: '&'
